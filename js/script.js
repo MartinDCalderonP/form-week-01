@@ -59,7 +59,14 @@ form.addEventListener('submit', (e) => {
 		errorsList.innerHTML = errors.join('');
 	} else {
 		errorsList.innerHTML = '';
-		console.log('Submit');
+		
+		let tableItems = {};
+
+		for (let i = 0; i < formItems.length - 1; i++) {
+			tableItems[formItems[i].name] = [formItems[i].value];
+		}
+
+		console.table(tableItems);
 	}
 });
 
