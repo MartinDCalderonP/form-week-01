@@ -6,7 +6,7 @@ let form = document.getElementById('Form');
 let errorsList = document.getElementById('Errors List');
 let errors = [];
 
-// Custom submit logic
+// Custom submit logic and validations
 
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
@@ -59,7 +59,7 @@ form.addEventListener('submit', (e) => {
 		errorsList.innerHTML = errors.join('');
 	} else {
 		errorsList.innerHTML = '';
-		
+
 		let tableItems = {};
 
 		for (let i = 0; i < formItems.length - 1; i++) {
@@ -90,11 +90,18 @@ function isInvalid(str, type) {
 	return false;
 }
 
-function onlyNumbers() {
-	let e = window.event;
-	let key = e.keyCode;
+function onlyNumbers(e) {
+	let key = e.key.charCodeAt();
 
-	if ((key >= 65 && key <= 90) || key == 192) {
-		e.preventDefault && e.preventDefault();
+	if ((key >= 97 && key <= 122) || key == 241) {
+		e.preventDefault();
 	}
 }
+
+// Event Listeners
+
+let ageInput = document.getElementById('Age');
+let phoneInput = document.getElementById('Phone Number');
+
+ageInput.addEventListener('keydown', onlyNumbers);
+phoneInput.addEventListener('keydown', onlyNumbers);
