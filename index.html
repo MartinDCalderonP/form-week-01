@@ -26,10 +26,15 @@
 				<input type="password" id="Repeat Password" name="Repeat Password" />
 
 				<label for="Phone Number">Phone Number</label>
-				<input type="tel" id="Phone Number" name="Phone Number" />
+				<input
+					type="tel"
+					id="Phone Number"
+					name="Phone Number"
+					onKeyDown="onlyNumbers()"
+				/>
 
 				<label for="Age">Age</label>
-				<input type="number" id="Age" name="Age" />
+				<input type="number" id="Age" name="Age" onKeyDown="onlyNumbers()" />
 
 				<label for="Website">Website</label>
 				<input type="url" id="Website" name="Website" />
@@ -62,4 +67,5 @@
 			<ul id="Errors List" class="errorsList"></ul>
 		</main>
 	</body>
+	<script src="js/script.js"></script>
 </html>
