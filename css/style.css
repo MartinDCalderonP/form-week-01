@@ -6,6 +6,11 @@
 	font-family: 'Roboto', sans-serif;
 }
 
+main {
+	display: flex;
+	justify-content: center;
+}
+
 form {
 	margin-top: 20px;
 	display: flex;
@@ -16,4 +21,26 @@ form {
 form > input,
 form > div {
 	margin-bottom: 20px;
+}
+
+.errorsList {
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: red;
+}
+
+.errorsList > li {
+	margin: 10px 0px;
+}
+
+.rangeInput {
+	font-size: 12px;
+	display: flex;
+	align-items: center;
+}
+
+.rangeInput > input {
+	margin: 10px;
 }
