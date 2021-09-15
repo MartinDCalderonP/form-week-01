@@ -11,13 +11,18 @@
 		<main>
 			<form id="Form">
 				<label for="Name">Name</label>
-				<input type="text" id="Name" name="Name" />
+				<input type="text" id="Name" name="Name" placeholder="John" />
 
 				<label for="Last Name">Last Name</label>
-				<input type="text" id="Last Name" name="Last Name" />
+				<input type="text" id="Last Name" name="Last Name" placeholder="Doe" />
 
 				<label for="Email">Email</label>
-				<input type="email" id="Email" name="Email" />
+				<input
+					type="email"
+					id="Email"
+					name="Email"
+					placeholder="example@example.com"
+				/>
 
 				<label for="Password">Password</label>
 				<input type="password" id="Password" name="Password" />
@@ -31,13 +36,25 @@
 					id="Phone Number"
 					name="Phone Number"
 					onKeyDown="onlyNumbers()"
+					placeholder="XXXX-XXXX"
 				/>
 
 				<label for="Age">Age</label>
-				<input type="number" id="Age" name="Age" onKeyDown="onlyNumbers()" />
+				<input
+					type="number"
+					id="Age"
+					name="Age"
+					onKeyDown="onlyNumbers()"
+					placeholder="XX"
+				/>
 
 				<label for="Website">Website</label>
-				<input type="url" id="Website" name="Website" />
+				<input
+					type="url"
+					id="Website"
+					name="Website"
+					placeholder="http://www.google.com"
+				/>
 
 				<label for="Level of Experience">Level of Experience</label>
 				<div class="rangeInput">
