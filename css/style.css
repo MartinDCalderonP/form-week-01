@@ -12,27 +12,33 @@ main {
 }
 
 form {
-	margin-top: 20px;
+	width: fit-content;
+	margin: 20px 0px;
+	border: 1px solid gray;
+	border-radius: 10px;
+	padding: 16px 24px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-form > input,
-form > div {
-	margin-bottom: 20px;
+form > input {
+	width: 90%;
+	margin: 2px 0px 24px;
+	border: 2px solid #303030;
+	border-radius: 5px;
+	padding: 8px 16px;
+	font-size: 16px;
+	outline-style: none;
+	transition: all 0.5s;
 }
 
-.errorsList {
-	margin-top: 40px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	color: red;
+form > input:hover {
+	background-color: #e2e2e2;
 }
 
-.errorsList > li {
-	margin: 10px 0px;
+form > input:focus {
+	border: 2px solid blue;
 }
 
 .rangeInput {
@@ -42,7 +48,39 @@ form > div {
 }
 
 .rangeInput > input {
-	margin: 10px;
+	margin: 8px 10px;
+}
+
+.tos {
+	margin-top: 24px;
+}
+
+.errorsList {
+	margin: 16px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: red;
+}
+
+.errorsList > li {
+	margin: 2px 0px;
+}
+
+.button {
+	margin: 4px 0px 8px;
+	padding: 8px 20px;
+	background-color: #cdcdcd;
+	border: 1px solid white;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.5s;
+	font-size: 16px;
+}
+
+.button:hover {
+	border: 1px solid gray;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .overlay {
