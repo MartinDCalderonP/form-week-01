@@ -77,6 +77,41 @@ form.addEventListener('submit', (e) => {
 	}
 });
 
+// Konami Code
+
+let konamiCode = ['ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft', 'A', 'B'];
+let position = 0;
+let overlay = document.getElementById('overlay');
+let modal = document.getElementById('modal');
+let closeIcon = document.getElementById('closeIcon');
+
+document.addEventListener('keydown', (e) => {
+	let key = e.key;
+	let required = konamiCode[position];
+
+	if (key === 'a' || key === 'b') {
+		key = key.toUpperCase();
+	}
+
+	if (key === required) {
+		position++;
+
+		if (position === konamiCode.length) {
+			showModal();
+		}
+	} else {
+		position = 0;
+	}
+});
+
+overlay.onclick = () => {
+	hideModal();
+};
+
+closeIcon.onclick = () => {
+	hideModal();
+};
+
 // Functions
 
 function isInvalid(str, type) {
@@ -105,26 +140,12 @@ function onlyNumbers(e) {
 	}
 }
 
-// Konami Code
+function showModal() {
+	overlay.style.display = 'block';
+	modal.style.display = 'block';
+}
 
-let konamiCode = ['ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft', 'A', 'B'];
-let position = 0;
-
-document.addEventListener('keydown', (e) => {
-	let key = e.key;
-	let required = konamiCode[position];
-
-	if (key === 'a' || key === 'b') {
-		key = key.toUpperCase();
-	}
-
-	if (key === required) {
-		position++;
-
-		if (position === konamiCode.length) {
-			console.log('KONAMI CODE');
-		}
-	} else {
-		position = 0;
-	}
-});
+function hideModal() {
+	overlay.style.display = 'none';
+	modal.style.display = 'none';
+}

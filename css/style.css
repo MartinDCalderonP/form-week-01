@@ -44,3 +44,34 @@ form > div {
 .rangeInput > input {
 	margin: 10px;
 }
+
+.overlay {
+	display: none;
+	background: rgba(0, 0, 0, 0.9);
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	transition: all 0.5s;
+}
+
+.modal {
+	display: none;
+	z-index: 200;
+	position: absolute;
+	top: 50%;
+	margin-top: -135px;
+	left: 50%;
+	margin-left: -240px;
+	transition: all 0.5s;
+}
+
+.modal > i {
+	font-size: 30px;
+	color: darkslategray;
+	margin: -30px -25px 0px 0px;
+	float: right;
+	cursor: pointer;
+	transition: all 0.5s;
+}
