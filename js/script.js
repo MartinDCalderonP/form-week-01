@@ -1,6 +1,7 @@
 'use strict';
 import { isInvalid } from './validations.js';
 import './konamiCode.js';
+import './rangeChanger.js';
 
 let form = document.getElementById('Form');
 let errorsList = document.getElementById('Errors List');
