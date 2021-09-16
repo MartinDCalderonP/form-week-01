@@ -1,19 +1,10 @@
 'use strict';
-
-// Declaration of Variables
+import { isInvalid } from './validations.js';
+import './konamiCode.js';
 
 let form = document.getElementById('Form');
 let errorsList = document.getElementById('Errors List');
 let errors = [];
-let ageInput = document.getElementById('Age');
-let phoneInput = document.getElementById('Phone Number');
-
-// Keydown Event Listeners
-
-ageInput.addEventListener('keydown', onlyNumbers);
-phoneInput.addEventListener('keydown', onlyNumbers);
-
-// Custom submit logic and validations
 
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
@@ -76,76 +67,3 @@ form.addEventListener('submit', (e) => {
 		console.table(tableItems);
 	}
 });
-
-// Konami Code
-
-let konamiCode = ['ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft', 'A', 'B'];
-let position = 0;
-let overlay = document.getElementById('overlay');
-let modal = document.getElementById('modal');
-let closeIcon = document.getElementById('closeIcon');
-
-document.addEventListener('keydown', (e) => {
-	let key = e.key;
-	let required = konamiCode[position];
-
-	if (key === 'a' || key === 'b') {
-		key = key.toUpperCase();
-	}
-
-	if (key === required) {
-		position++;
-
-		if (position === konamiCode.length) {
-			showModal();
-		}
-	} else {
-		position = 0;
-	}
-});
-
-overlay.onclick = () => {
-	hideModal();
-};
-
-closeIcon.onclick = () => {
-	hideModal();
-};
-
-// Functions
-
-function isInvalid(str, type) {
-	let regexTypes = {
-		text: /^[a-zA-Z]+$/,
-		email: /\S+@\S+\.\S+/,
-		tel: /^[0-9]{4}-[0-9]{4}$/,
-		age: /^[0-9]{2}$/,
-		url: /\S+\.\S+\.\S+/,
-	};
-
-	let regex = regexTypes[type];
-
-	if (!str.value.match(regex)) {
-		return true;
-	}
-
-	return false;
-}
-
-function onlyNumbers(e) {
-	let key = e.key.charCodeAt();
-
-	if ((key >= 97 && key <= 122) || key == 241) {
-		e.preventDefault();
-	}
-}
-
-function showModal() {
-	overlay.style.display = 'block';
-	modal.style.display = 'block';
-}
-
-function hideModal() {
-	overlay.style.display = 'none';
-	modal.style.display = 'none';
-}
