@@ -62,7 +62,9 @@ form.addEventListener('submit', (e) => {
 		let tableItems = {};
 
 		for (let i = 0; i < formItems.length - 1; i++) {
-			tableItems[formItems[i].name] = [formItems[i].value];
+			formItems[i].type !== 'checkbox'
+				? (tableItems[formItems[i].name] = [formItems[i].value])
+				: (tableItems[formItems[i].name] = [formItems[i].checked]);
 		}
 
 		console.table(tableItems);
