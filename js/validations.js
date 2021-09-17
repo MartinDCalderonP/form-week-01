@@ -1,10 +1,10 @@
 let ageInput = document.getElementById('Age');
 let phoneInput = document.getElementById('Phone Number');
 
-ageInput.addEventListener('keydown', onlyNumbers);
-phoneInput.addEventListener('keydown', onlyNumbers);
+ageInput.addEventListener('keydown', avoidLetters);
+phoneInput.addEventListener('keydown', avoidLetters);
 
-function onlyNumbers(e) {
+function avoidLetters(e) {
 	let key = e.key.charCodeAt();
 
 	if ((key >= 97 && key <= 122) || key == 241) {
@@ -23,9 +23,5 @@ export function isInvalid(str, type) {
 
 	let regex = regexTypes[type];
 
-	if (!str.value.match(regex)) {
-		return true;
-	}
-
-	return false;
+	return !str.value.match(regex) ? true : false;
 }
