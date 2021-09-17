@@ -2,13 +2,13 @@ let overlay = document.getElementById('overlay');
 let closeIcon = document.getElementById('closeIcon');
 let modal = document.getElementById('modal');
 
-overlay.onclick = () => {
+overlay.addEventListener('click', (e) => {
 	hideModal();
-};
+});
 
-closeIcon.onclick = () => {
+closeIcon.addEventListener('click', (e) => {
 	hideModal();
-};
+});
 
 function hideModal() {
 	overlay.style.display = 'none';
