@@ -24,23 +24,54 @@ form {
 	align-items: center;
 }
 
-form > input {
-	width: 90%;
+.inputDiv {
+	position: relative;
+	width: inherit;
+}
+
+.inputDiv > input {
+	width: 100%;
 	margin: 2px 0px 24px;
 	border: 2px solid #303030;
 	border-radius: 5px;
-	padding: 8px 16px;
+	padding: 8px 28px 8px 16px;
 	font-size: 16px;
 	outline-style: none;
-	transition: all 0.5s;
+	transition: all 0.3s;
+	box-sizing: border-box;
 }
 
-form > input:hover {
+.inputDiv > input:hover {
 	background-color: #e2e2e2;
 }
 
-form > input:focus {
-	border: 2px solid blue;
+.inputDiv > input:focus {
+	border-color: blue;
+}
+
+.inputDiv > i {
+	display: none;
+	position: absolute;
+	top: 33px;
+	right: 10px;
+}
+
+.success > input {
+	border-color: green;
+}
+
+.success > .fa-check-circle {
+	display: block;
+	color: green;
+}
+
+.error > input {
+	border-color: red !important;
+}
+
+.error > .fa-times-circle {
+	display: block;
+	color: red;
 }
 
 .rangeInput {
