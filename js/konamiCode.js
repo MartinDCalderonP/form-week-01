@@ -13,14 +13,10 @@ function konamiCode(e) {
 		key = key.toUpperCase();
 	}
 
-	if (key === required) {
-		position++;
+	key === required ? position++ : (position = 0);
 
-		if (position === code.length) {
-			showModal();
-			position = 0;
-		}
-	} else {
+	if (position === code.length) {
+		showModal();
 		position = 0;
 	}
 }
