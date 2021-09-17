@@ -128,7 +128,7 @@ form {
 }
 
 .modal {
-	display: none;
+	display: block;
 	z-index: 200;
 	position: absolute;
 	top: 50%;
@@ -151,11 +151,11 @@ form {
 	color: #f9f9f9;
 }
 
-.appearModal {
-	animation: appearModal 0.4s ease-in;
+.showModal {
+	animation: showModal 0.4s ease-in;
 }
 
-@keyframes appearModal {
+@keyframes showModal {
 	0% {
 		transform: scale(0);
 	}
