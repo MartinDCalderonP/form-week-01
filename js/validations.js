@@ -1,7 +1,7 @@
-let firstName = document.getElementById('First Name');
-let lastName = document.getElementById('Last Name');
-let ageInput = document.getElementById('Age');
-let phoneInput = document.getElementById('Phone Number');
+const firstName = document.getElementById('First Name');
+const lastName = document.getElementById('Last Name');
+const ageInput = document.getElementById('Age');
+const phoneInput = document.getElementById('Phone Number');
 
 firstName.addEventListener('keydown', avoidNumbers);
 lastName.addEventListener('keydown', avoidNumbers);
@@ -47,7 +47,7 @@ export default function isValidValue(input) {
 		return `<li>Accept the ${input.name} is required.</li>`;
 	}
 
-	let regexTypes = {
+	const regexTypes = {
 		text: /^[a-zA-Z]+$/,
 		email: /\S+@\S+\.\S+/,
 		tel: /^[0-9]{4}-[0-9]{4}$/,
@@ -55,7 +55,7 @@ export default function isValidValue(input) {
 		url: /\S+\.\S+\.\S+/,
 	};
 
-	let messagesTypes = {
+	const messagesTypes = {
 		text: `<li>${input.name} must have letters only.</li>`,
 		email: `<li>${input.name} format must be "example@example.com".</li>`,
 		tel: `<li>${input.name} format must be "XXXX-XXXX".</li>`,

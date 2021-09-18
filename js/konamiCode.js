@@ -1,6 +1,6 @@
 import { showModal } from './modal.js';
 
-let code = ['ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft', 'A', 'B'];
+const code = ['ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft', 'A', 'B'];
 let position = 0;
 
 document.addEventListener('keydown', konamiCode);

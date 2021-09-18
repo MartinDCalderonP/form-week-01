@@ -3,9 +3,9 @@ import isValidValue from './validations.js';
 import './konamiCode.js';
 import './rangeChanger.js';
 
-let form = document.getElementById('Form');
-let formItems = form.elements;
-let errorsList = document.getElementById('Errors List');
+const form = document.getElementById('Form');
+const formItems = form.elements;
+const errorsList = document.getElementById('Errors List');
 let errorsArray = [];
 
 form.addEventListener('submit', customSubmit);
@@ -36,6 +36,7 @@ function inputSuccess(input) {
 
 function inputError(input, message) {
 	errorsArray.push(message);
+
 	if (input.type !== 'checkbox') {
 		input.parentElement.className = 'inputDiv error';
 	}

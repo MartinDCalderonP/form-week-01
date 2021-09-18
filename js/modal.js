@@ -1,5 +1,5 @@
-let overlay = document.getElementById('overlay');
-let closeIcon = document.getElementById('closeIcon');
+const overlay = document.getElementById('overlay');
+const closeIcon = document.getElementById('closeIcon');
 
 overlay.addEventListener('click', hideModal);
 closeIcon.addEventListener('click', hideModal);
