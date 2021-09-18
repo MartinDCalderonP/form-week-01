@@ -118,6 +118,8 @@ form {
 
 .overlay {
 	display: none;
+	justify-content: center;
+	align-items: center;
 	background: rgba(0, 0, 0, 0.9);
 	width: 100vw;
 	height: 100vh;
@@ -128,27 +130,27 @@ form {
 }
 
 .modal {
-	display: block;
-	z-index: 200;
-	position: absolute;
-	top: 50%;
-	margin-top: -135px;
-	left: 50%;
-	margin-left: -240px;
+	display: flex;
+	flex-direction: column;
 	transition: all 0.5s;
 }
 
 .modal > i {
 	font-size: 30px;
 	color: darkslategray;
-	margin: -30px -25px 0px 0px;
-	float: right;
 	cursor: pointer;
 	transition: all 0.3s;
+	align-self: flex-end;
+	margin: 0px -22px -3px 0px;
 }
 
 .modal > i:hover {
 	color: #f9f9f9;
+}
+
+.modal > iframe {
+	width: 480px;
+	height: 270px;
 }
 
 .showModal {
@@ -168,6 +170,15 @@ form {
 	form {
 		width: 100%;
 		margin: 0;
+	}
+
+	.modal > i {
+		align-self: center;
+		margin-bottom: 20px;
+	}
+
+	.modal > iframe {
+		width: 100vw;
 	}
 }
 

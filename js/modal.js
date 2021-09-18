@@ -9,5 +9,5 @@ function hideModal() {
 }
 
 export function showModal() {
-	overlay.style.display = 'block';
+	overlay.style.display = 'flex';
 }
