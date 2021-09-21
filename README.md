@@ -1,6 +1,6 @@
-# Form Test
+# Form
 
-This form test validates all the inputs with vanilla JavaScript.
+This form validates all the inputs with vanilla JavaScript.
 
 ### Konami Code
 
